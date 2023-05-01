@@ -170,6 +170,15 @@ header.shadow #search-icon, header.shadow #cart-icon {
     font-weight: 300;
     margin: 10px 0 20px;
 }
+
+.error{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #d90429;
+    margin-top: 20px;
+}
+
 .btn-buy{
     padding: 10px 22px;
     background: #d90429;
@@ -177,6 +186,9 @@ header.shadow #search-icon, header.shadow #cart-icon {
     font-weight: 400;
     border: none;
     cursor: pointer;
+}
+.btn-buy:hover{
+    background-color: #fd052f;
 }
 
 .heading{
@@ -250,10 +262,11 @@ header.shadow #search-icon, header.shadow #cart-icon {
 }
 .cart table{
     width: 700px;
+    text-align: center;
+    border-collapse: collapse;
 }
 .cart table thead tr th:first-child{
     text-align: left;
-   
 }
 
 .cart table tr td {
@@ -264,11 +277,9 @@ header.shadow #search-icon, header.shadow #cart-icon {
     font-weight: bold;
     text-align: right;
 }
-.cart table thead tr th:last-child{
-    text-align: right;
-}
-.cart table thead tr td:last-child{
-    text-align: right;
+
+.cart table thead tr th{
+    border-bottom: 1px solid #d90429;
 }
 
 /*  */
@@ -300,14 +311,16 @@ header.shadow #search-icon, header.shadow #cart-icon {
   .details1 i, .details2 i, .details3 i, .details4 i, .details5 i , .details6 i {
     font-size: 24px;
     cursor: pointer;
+    font-weight: bold;
+    color: #020102;
   }
 
 /*  */
 
 .cart {
     position: fixed;
-    height: 900px;
-    width: 730px;
+    height: 522px;
+    width: 750px;
     right: 0;
     top: 0;
     background-color: #f6f6f6;
@@ -316,12 +329,17 @@ header.shadow #search-icon, header.shadow #cart-icon {
     overflow-y: scroll;
     right: -100%;
     transition: all 0.3s ease;
-    border-radius: 5%;
+    border-radius: 5% 0 0 5%;
     border: 2px solid #fd052f;
+    border-right: none;
+    
 }
+
 .cart i {
     cursor: pointer;
-    font-size: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #020102;
 }
 .cart button{
     margin-top: 12px;

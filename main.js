@@ -199,10 +199,12 @@ function filterList() {
     listItems.forEach((item) => {
         let text = item.textContent
         if (text.toLowerCase().includes(filter.toLowerCase())) {
-            item.style.fontSize = 'larger';
+            item.style.fontSize = 'xx-large';
+            
         }
         else {
             item.style.fontSize = 'small';
+            
         }
     });
 }

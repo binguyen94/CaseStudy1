@@ -238,7 +238,7 @@ header.shadow #add-icon {
 }
 
 .cars-container .box img:hover {
-    transform: scale(1.1);
+    transform: scale(1.5);
     transform: 0.5s;
 }
 
@@ -371,7 +371,7 @@ header.shadow #add-icon {
     margin-top: 150px;
     overflow-y: scroll;
     right: -100%;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
     border-radius: 5% 0 0 5%;
     border: 2px solid #fd052f;
     border-right: none;

@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porche Viet Nam</title>
+    <title>Porsche Viet Nam</title>
     <!-- link của css -->
     <link rel="stylesheet" href="/style.css">
     <!-- box icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -20,23 +21,25 @@
             <!-- Menu icon -->
             <i class='bx bx-menu' id="menu-icon"></i>
             <!-- Logo -->
-            <a href="#" class="logo">Porche<span>NTN</span></a>
+            <a href="#" class="logo">Porsche<span>NTN</span></a>
             <!-- nav List -->
             <ul class="navbar">
                 <li><a href="#home" class="active">Trang chủ</a></li>
                 <li><a href="#cars">Các dòng xe</a></li>
-                <li><a href="#about">Về Porche</a></li>
+                <li><a href="#about">Về Porsche</a></li>
                 <li><a href="#parts">Sản phẩm</a></li>
                 <li><a href="#blog">Tin Tức & Sự Kiện</a></li>
             </ul>
             <!-- Search Icon -->
-            <div>
-                <i class='bx bx-search' id="search-icon"></i>
+            <div class="tools">
+                <a href="#parts-container container"> <i class='bx bx-search' id="search-icon"></i></a>
+                <i class='bx bxs-grid' id="add-icon"></i>
                 <p><i class='bx bx-cart' id='cart-icon'></i><span class="cart-price">0</span><sup>VNĐ</sup></p>
+
             </div>
             <!-- Search Box -->
             <div class="search-box container">
-                <input type="search" name="" id="" placeholder="Tìm kiếm...">
+                <input type="search" name="" id="search-item" placeholder="Tìm kiếm..." onkeyup="search()">
 
             </div>
         </div>
@@ -44,17 +47,17 @@
     <!-- Trang chủ -->
     <section class="home" id="home">
         <div class="home-text">
-            <h1>PORCHE <br>Uyển Chuyển Và <span>Tốc Độ</span></h1>
+            <h1>PORSCHE <br>Uyển Chuyển Và <span>Tốc Độ</span></h1>
             <p>Được chế tạo không giống bất kỳ <br> ô tô nào khác trên thế giới </p>
             <!-- Nút Home -->
-            <a href="#" class="btn-slogan">Khám Phá Ngay</a>
+            <a href="#review-section" class="btn-slogan">Khám Phá Ngay</a>
         </div>
     </section>
     <!-- Phần các ô tô -->
     <section class="cars" id="cars">
         <div class="heading">
-            <span>Tất Cả Các Dòng xe Porche</span>
-            <h2>Chúng tôi có tất cả các loại xe Porche</h2>
+            <span>Tất Cả Các Dòng xe Porsche</span>
+            <h2>Chúng tôi có tất cả các loại xe Porsche</h2>
             <p>Đối với dòng xe Panamera, Cayenne, Macan và Taycan giá tiêu chuẩn bao gồm thêm gói dịch vụ 4 năm bảo
                 dưỡng</p>
         </div>
@@ -102,7 +105,9 @@
             <h2>Giá Rẻ So Với <br>Chất Lượng</h2>
             <p>Thành lập từ năm 2007, Porsche đã đánh dấu một thập kỷ tại thị trường Việt Nam và đang phát triển vững
                 mạnh, xác lập vị thế hàng đầu trong phân khúc xe hơi thể thao hạng sang. Hiện, Porsche có hai trung tâm:
-                Porsche Sài Gòn, thành lập vào năm 2008 và trung tâm […]</p>
+                Porsche Sài Gòn, thành lập vào năm 2008 và trung tâm. <span id="more-content">Porsche đã đánh dấu một
+                    thập kỷ tại thị trường Việt Nam và đang phát triển vững
+                    mạnh</span></p>
             <!-- About Button -->
             <a href="#" class="about-btn">Xem thêm</a>
         </div>
@@ -116,63 +121,68 @@
                 thuế giá trị gia tăng.</p>
         </div>
         <!-- Parts Container -->
-        <div class="parts-container container">
+        <div class="parts-container container" id="parts-container container">
             <!-- Box 1 -->
             <div class="box">
                 <img src="/img/part1.jpg" alt="">
-                <h3>718 Cayman</h3>
+                <h3 class="producth3">718 Cayman</h3>
                 <p><span>3.850.000.000</span><sup>VNĐ</sup></p>
-                <i class='bx bxs-star'>(612 Lượt Xem)</i>
-                <button class="btn-buy">Mua Ngay</button>
+                <i class='bx bxs-heart'>(612 Lượt Xem)</i>
+                <button class="btn-buy">Đặt Hàng </button>
                 <button class="details-btn1">Xem Chi Tiết</button>
             </div>
             <!-- Box 2 -->
             <div class="box">
                 <img src="/img/part2.jpg" alt="">
-                <h3>911 Carrera T</h3>
+                <h3 class="producth3">911 Carrera T</h3>
                 <p><span>8.310.000.000</span><sup>VNĐ</sup></p>
-                <i class='bx bxs-star'>(592 Lượt Xem)</i>
-                <button class="btn-buy">Mua Ngay</button>
+                <i class='bx bxs-heart'>(592 Lượt Xem)</i>
+                <button class="btn-buy">Đặt Hàng </button>
                 <button class="details-btn2">Xem Chi Tiết</button>
             </div>
             <!-- Box 3 -->
             <div class="box">
                 <img src="/img/part3.jpg" alt="">
-                <h3>Taycan 4 Cross Turismo</h3>
+                <h3 class="producth3">Taycan 4 Cross Turismo</h3>
                 <p><span>4.880.000.000</span><sup>VNĐ</sup></p>
-                <i class='bx bxs-star'>(515 Lượt Xem)</i>
-                <button class="btn-buy">Mua Ngay</button>
+                <i class='bx bxs-heart'>(515 Lượt Xem)</i>
+                <button class="btn-buy">Đặt Hàng </button>
                 <button class="details-btn3">Xem Chi Tiết</button>
             </div>
             <!-- Box 4 -->
             <div class="box">
                 <img src="/img/part4.jpg" alt="">
-                <h3>Panamera Platinum Edition</h3>
+                <h3 class="producth3">Panamera Platinum Edition</h3>
                 <p><span>6.030.000.000</span><sup>VNĐ</sup></p>
-                <i class='bx bxs-star'>(641 Lượt Xem)</i>
-                <button class="btn-buy">Mua Ngay</button>
+                <i class='bx bxs-heart'>(641 Lượt Xem)</i>
+                <button class="btn-buy">Đặt Hàng </button>
                 <button class="details-btn4">Xem Chi Tiết</button>
             </div>
             <!-- Box 5 -->
             <div class="box">
                 <img src="/img/part5.jpg" alt="">
-                <h3>Macan T</h3>
+                <h3 class="producth3">Macan T</h3>
                 <p><span>3.570.000.000</span><sup>VNĐ</sup></p>
-                <i class='bx bxs-star'>(356 Lượt Xem)</i>
-                <button class="btn-buy">Mua Ngay</button>
+                <i class='bx bxs-heart'>(356 Lượt Xem)</i>
+                <button class="btn-buy">Đặt Hàng </button>
                 <button class="details-btn5">Xem Chi Tiết</button>
             </div>
             <!-- Box 6 -->
             <div class="box">
                 <img src="/img/part6.jpg" alt="">
-                <h3>Cayenne Coupé</h3>
+                <h3 class="producth3">Cayenne Coupé</h3>
                 <p><span>5.270.000.000</span><sup>VNĐ</sup></p>
-                <i class='bx bxs-star'>(498 Lượt Xem)</i>
-                <button class="btn-buy">Mua Ngay</button>
+                <i class='bx bxs-heart'>(498 Lượt Xem)</i>
+                <button class="btn-buy">Đặt Hàng </button>
                 <button class="details-btn6">Xem Chi Tiết</button>
             </div>
         </div>
     </section>
+    <!-- Add Product -->
+
+
+
+    <!-- Cart -->
     <section class="cart">
         <i class='bx bx-x'></i>
         <h2>Cart</h2>
@@ -199,89 +209,90 @@
         </form>
     </section>
 
+    <!-- Add Product -->
     <!-- details -->
     <!--  Box 1 -->
     <section class="details1">
         <form action="">
-        <i class='bx bx-x details-bx1'></i>
-        <h2>Thông số kỹ thuật</h2>
-        <div>
-            <p>Động cơ: Động cơ điện</p>
-            <p>Công suất tối đa: 375 mã lực</p>
-            <p>Tốc độ tối đa: 135 mphn</p>
-            <p>Mô-men xoắn tối đa: 357 lb-ft</p>
-            <p>Trọng lượng không tải: 2,250kg</p>
-        </div>
+            <i class='bx bx-x details-bx1'></i>
+            <h2>Thông số kỹ thuật</h2>
+            <div>
+                <p>Động cơ: Động cơ điện</p>
+                <p>Công suất tối đa: 375 mã lực</p>
+                <p>Tốc độ tối đa: 135 mphn</p>
+                <p>Mô-men xoắn tối đa: 357 lb-ft</p>
+                <p>Trọng lượng không tải: 2,250kg</p>
+            </div>
         </form>
     </section>
     <!--  Box 2 -->
     <section class="details2">
         <form action="">
-        <i class='bx bx-x details-bx2'></i>
-        <h2>Thông số kỹ thuật</h2>
-        <div>
-            <p>Động cơ: Turbo tăng áp động cơ xăng</p>
-            <p>Công suất cực đại: 370 mã lực tại 6.500</p>
-            <p>TVận tốc tối đa: 293 km/h</p>
-            <p>Mô-men xoắn cực đại: 450 Nm tại 1.750 </p>
-            <p>Trọng lượng: 1.425 - 1.485 kg</p>
-        </div>
+            <i class='bx bx-x details-bx2'></i>
+            <h2>Thông số kỹ thuật</h2>
+            <div>
+                <p>Động cơ: Turbo tăng áp động cơ xăng</p>
+                <p>Công suất cực đại: 370 mã lực tại 6.500</p>
+                <p>TVận tốc tối đa: 293 km/h</p>
+                <p>Mô-men xoắn cực đại: 450 Nm tại 1.750 </p>
+                <p>Trọng lượng: 1.425 - 1.485 kg</p>
+            </div>
         </form>
     </section>
     <!--  Box 3 -->
     <section class="details3">
         <form action="">
-        <i class='bx bx-x details-bx3'></i>
-        <h2>Thông số kỹ thuật</h2>
-        <div>
-            <p>Động cơ: Động cơ điện hai cầu</p>
-            <p>Dung lượng pin: 79,2 kWh hoặc 93,4 kWh</p>
-            <p>Tốc độ tối đa: 220 km/h</p>
-            <p>Tăng tốc: 0 - 100 km/h trong khoảng 5,1 giây</p>
-            <p>Trọng lượng: 2.250 kg</p>
-        </div>
+            <i class='bx bx-x details-bx3'></i>
+            <h2>Thông số kỹ thuật</h2>
+            <div>
+                <p>Động cơ: Động cơ điện hai cầu</p>
+                <p>Dung lượng pin: 79,2 kWh hoặc 93,4 kWh</p>
+                <p>Tốc độ tối đa: 220 km/h</p>
+                <p>Tăng tốc: 0 - 100 km/h trong khoảng 5,1 giây</p>
+                <p>Trọng lượng: 2.250 kg</p>
+            </div>
         </form>
     </section>
     <!--  Box 4 -->
     <section class="details4">
         <form action="">
-        <i class='bx bx-x details-bx4'></i>
-        <h2>Thông số kỹ thuật</h2>
-        <div>
-            <p>Động cơ: 3.6L V6 động cơ xăng </p>
-            <p>Tăng tốc: 0 - 100 km/h trong 6,3 giây</p>
-            <p>Tốc độ tối đa: 135 mphn</p>
-            <p>Tiêu thụ nhiên liệu: 6,7 L/100km</p>
-            <p>Trọng lượng: 1.855 - 2.055 kg</p>
-        </div>
+            <i class='bx bx-x details-bx4'></i>
+            <h2>Thông số kỹ thuật</h2>
+            <div>
+                <p>Động cơ: 3.6L V6 động cơ xăng </p>
+                <p>Tăng tốc: 0 - 100 km/h trong 6,3 giây</p>
+                <p>Tốc độ tối đa: 135 mphn</p>
+                <p>Tiêu thụ nhiên liệu: 6,7 L/100km</p>
+                <p>Trọng lượng: 1.855 - 2.055 kg</p>
+            </div>
         </form>
     </section>
     <!--  Box 5 -->
     <section class="details5">
         <form action="">
-        <i class='bx bx-x details-bx5'></i>
-        <h2>Thông số kỹ thuật</h2>
-        <div>
-            <p>Động cơ: Động cơ xăng 4 xy-lanh</p>
-            <p>Vận tốc tối đa: 232 km/h</p>
-            <p>Tốc độ tối đa: 135 mphn</p>
-            <p>Tiêu thụ nhiên liệu: 8,1 L/100km</p>
-            <p>Trọng lượng: 1.780 - 1.865 kg</p>
-        </div>
+            <i class='bx bx-x details-bx5'></i>
+            <h2>Thông số kỹ thuật</h2>
+            <div>
+                <p>Động cơ: Động cơ xăng 4 xy-lanh</p>
+                <p>Vận tốc tối đa: 232 km/h</p>
+                <p>Tốc độ tối đa: 135 mphn</p>
+                <p>Tiêu thụ nhiên liệu: 8,1 L/100km</p>
+                <p>Trọng lượng: 1.780 - 1.865 kg</p>
+            </div>
         </form>
     </section>
     <!--  Box 6 -->
     <section class="details6">
         <form action="">
-        <i class='bx bx-x details-bx6'></i>
-        <h2>Thông số kỹ thuật</h2>
-        <div>
-            <p>Động cơ: Động cơ xăng 6 xi-lanh</p>
-            <p>Hộp số: Hộp số tự động 8 cấp Tiptronic S</p>
-            <p>Tốc độ tối đa: 135 mphn</p>
-            <p>Mô-men xoắn tối đa: 357 lb-ft</p>
-            <p>Trọng lượng không tải: 2,250kg</p>
-        </div>
+            <i class='bx bx-x details-bx6'></i>
+            <h2>Thông số kỹ thuật</h2>
+            <div>
+                <p>Động cơ: Động cơ xăng 6 xi-lanh</p>
+                <p>Hộp số: Hộp số tự động 8 cấp Tiptronic S</p>
+                <p>Tốc độ tối đa: 135 mphn</p>
+                <p>Mô-men xoắn tối đa: 357 lb-ft</p>
+                <p>Trọng lượng không tải: 2,250kg</p>
+            </div>
         </form>
     </section>
     <!-- Blog Container -->
@@ -300,9 +311,12 @@
                 <h3>Phòng ngừa dịch COVID-19 tại Trung tâm Porsche Việt Nam</h3>
                 <p>Nhằm phòng chống dịch bệnh COVID-19, Porsche Việt Nam mong nhận được sự hợp tác của Quý khách trong
                     việc thực hiện các biện pháp an toàn sau:
-
-                    Khi đến Trung tâm Porsche, Quý khách sẽ được chúng tôi kiểm tra thân nhiệt.</p>
-                <a href="#" class="blog-btn">Đọc Thêm<i class='bx bx-right-arrow-alt'></i></a>
+                    Khi đến Trung tâm Porsche, Quý khách sẽ được chúng tôi kiểm tra thân nhiệt.
+                    <span id="more-content2">Porsche đã đánh dấu một thập kỷ tại thị trường Việt Nam và đang phát triển
+                        vững
+                        mạnh.</span>
+                </p>
+                <a href="#" class="blog-btn1">Đọc Thêm<i class='bx bx-right-arrow-alt'></i></a>
             </div>
             <!-- Box 2 -->
             <div class="box">
@@ -311,8 +325,12 @@
                 <h3>Dịch vụ Bảo Dưỡng Lưu Động 2023 của Porsche</h3>
                 <p>Để duy trì khả năng vận hành tối ưu, một chiếc xe thể thao cần sự chăm sóc và bảo dưỡng thường xuyên.
                     Thấu hiểu rằng không phải tất cả Quý khách đều thuận tiện để đến các trung tâm Porsche, chúng tôi
-                    tiếp tục triển khai dịch vụ Bảo dưỡng lưu động trong năm 2023 tại một số khu vực trên toàn quốc.</p>
-                <a href="#" class="blog-btn">Đọc Thêm<i class='bx bx-right-arrow-alt'></i></a>
+                    tiếp tục triển khai dịch vụ Bảo dưỡng lưu động trong năm 2023 tại một số khu vực trên toàn quốc.
+                    <span id="more-content3">Porsche đã đánh dấu một thập kỷ tại thị trường Việt Nam và đang phát triển
+                        vững
+                        mạnh.</span>
+                </p>
+                <a href="#" class="blog-btn2">Đọc Thêm<i class='bx bx-right-arrow-alt'></i></a>
             </div>
             <!-- Box 3 -->
             <div class="box">
@@ -321,8 +339,56 @@
                 <h3>Ưu đãi Mùa lễ hội: Bộ sưu tập Phong cách sống Porsche</h3>
                 <p>Giống như những chiếc xe Porsche, Bộ sưu tập Phong cách sống cũng là hiện thân cho tinh thần thể thao
                     và phong cách Porsche năng động. Từ những chiếc đồng hồ lịch lãm, những chiếc kính thời trang cổ
-                    điển tới va-li du lịch đa chức năng.</p>
-                <a href="#" class="blog-btn">Đọc Thêm<i class='bx bx-right-arrow-alt'></i></a>
+                    điển tới va-li du lịch đa chức năng.
+                    <span id="more-content4">Porsche đã đánh dấu một thập kỷ tại thị trường Việt Nam và đang phát triển
+                        vững
+                        mạnh.</span>
+                </p>
+                <a href="#" class="blog-btn3">Đọc Thêm<i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- review section -->
+    <section class="review-section" id="review-section">
+        <div class="section-title">
+            <h2>Đánh Giá Của <span>Khách Hàng</span> Với PORSCHE</h2>
+        </div>
+        <div class="review-container">
+            <div class="review-card">
+                <div class="user-dp" data-rating="4.9"><img src="/img/27193754-shark-hung.jpg" alt=""></div>
+                <h2 class="review-title">Thiết kế dị, rộng hơn hẳn Carnival, có 11 ghế nhưng ngồi đều sướng</h2>
+                <p class="review">Vô lăng tích hợp các phím bấm media, đàm thoại rảnh tay, ga tự động thích ứng, hệ
+                    thống giữ làn,... thuộc gói SmartSense. Đồng hồ tốc độ dạng màn hình 12,3 inch đặt nổi khá lạ
+                    mắt.Loạt nút bấm được tích hợp trên trần xe gồm đóng/mở cửa trượt điện cho hàng hai, cửa sổ trời, hệ
+                    thống đèn xe, cốp điện
+
+                </p>
+            </div>
+            <div class="review-card">
+                <div class="user-dp" data-rating="4.9"><img src="/img/shark-dung-3-jpg-20211126110354GNkIt9Dwi.jpg"
+                        alt=""></div>
+                <h2 class="review-title">Đã hiểu vì sao các bán tải khác phải 'quỳ xuống'</h2>
+                <p class="review">Xe được trang bị bộ mâm 6 chấu kép kích thước 17 inch, lốp địa hình 32 inch. Bên trong
+                    Ranger Raptor 2023 sở hữu tông màu đen chủ đạo, đi cùng với những cam tông xuyệt tông với bên ngoài.
+
+                </p>
+            </div>
+            <div class="review-card">
+                <div class="user-dp" data-rating="4.9"><img src="/img/bghj.jpg" alt=""></div>
+                <h2 class="review-title">Nhiều trang bị hấp dẫn, giá lại rẻ hơn hẳn Fortuner</h2>
+                <p class="review">Dưới nắp ca-pô, 718 2023 được trang bị động cơ diesel YD25DDTi 4 xy-lanh, tăng áp,
+                    dung tích 2.5L giúp sản sinh công suất 190 mã lực và mô-men xoắn cực đại 450 Nm, kết hợp cùng hộp số
+                    7 cấp, cùng hệ dẫn động 4 bánh.
+                </p>
+            </div>
+            <div class="review-card">
+                <div class="user-dp" data-rating="4.9"><img src="/img/hinh-1.jpg" alt=""></div>
+                <h2 class="review-title">Nhiều chi tiết bất ngờ hơn trên ảnh</h2>
+                <p class="review">Xe sở hữu khá nhiều công nghệ an toàn và hỗ trợ lái, ví dụ như ABS, EBD, BA, cân bằng
+                    điện tử, hỗ trợ lên/xuống dốc, 6 túi khí, cảnh báo va chạm phía trước, cảnh báo chuyển làn đường,
+                    cảnh báo xe phía trước di chuyển
+                </p>
             </div>
         </div>
     </section>
@@ -330,18 +396,23 @@
     <section class="footer">
         <div class="footer-container container">
             <div class="footer-box">
-                <a href="#" class="logo">Porche<span>NTN</span></a>
+                <a href="#" class="logo">Porsche<span>NTN</span></a>
                 <div class="social">
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
-                    <a href="#"><i class='bx bxl-youtube'></i></a>
-                    <a href="#"><i class='bx bxl-tiktok'></i></a>
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.facebook.com/Official.Porsche.Importer.Vietnam" target="_blank"><i
+                            class='bx bxl-facebook'></i></a>
+                    <a href="https://www.youtube.com/channel/UCvGGsFINhxTQXiwb3pBTomw" target="_blank"><i
+                            class='bx bxl-youtube'></i></a>
+                    <a href="https://www.tiktok.com/@porsche" target="_blank"><i class='bx bxl-tiktok'></i></a>
+                    <a href="https://www.instagram.com/porsche_vietnam/" target="_blank"><i
+                            class='bx bxl-instagram'></i></a>
                 </div>
             </div>
             <div class="footer-box">
                 <h3>Các Trung Tâm Porsche</h3>
-                <a href="#">Trung Tâm Porsche Sài Gòn</a>
-                <a href="#">Trung Tâm Porsche Hà Nội</a>
+                <a href="https://porsche-vietnam.vn/dai-ly/trung-tam-porsche-sai-gon/" target="_blank">Trung Tâm Porsche
+                    Sài Gòn</a>
+                <a href="https://porsche-vietnam.vn/dai-ly/trung-tam-porsche-ha-noi/" target="_blank">Trung Tâm Porsche
+                    Hà Nội</a>
                 <a href="#">Trung Tâm Porsche Huế</a>
             </div>
             <div class="footer-box">
@@ -359,9 +430,6 @@
     </section>
     <!-- link của JS -->
     <script src="/main.js"></script>
-
-
-
 
 </body>
 

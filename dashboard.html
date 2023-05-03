@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="/dashboard.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <header>
+        <!-- nav container -->
+        <div class="nav container">
+            <!-- Menu icon -->
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <!-- Logo -->
+            <a href="#" class="logo">Porsche<span>NTN</span></a>
+            <!-- nav List -->
+            <ul class="navbar">
+                <li><a href="#home" class="active">Trang chủ</a></li>
+                <li><a href="#cars">Các dòng xe</a></li>
+                <li><a href="#about">Về Porsche</a></li>
+                <li><a href="#parts">Sản phẩm</a></li>
+                <li><a href="#blog">Tin Tức & Sự Kiện</a></li>
+            </ul>
+            <!-- Search Icon -->
+            <div class="tools">
+                <a href="#parts-container container"> <i class='bx bx-search' id="search-icon"></i></a>
+                <i class='bx bxs-grid' id="add-icon"></i>
+                <!-- <p><i class='bx bx-cart' id='cart-icon'></i><span class="cart-price">0</span><sup>VNĐ</sup></p> -->
+
+            </div>
+            <!-- Search Box -->
+            <div class="search-box container">
+                <input type="search" name="" id="search-item" placeholder="Tìm kiếm..." onkeyup="search()">
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Trang chủ -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>PORSCHE <br>Uyển Chuyển Và <span>Tốc Độ</span></h1>
+            <p>Được chế tạo không giống bất kỳ <br> ô tô nào khác trên thế giới </p>
+            <!-- Nút Home -->
+            <a href="#review-section" class="btn-slogan">Khám Phá Ngay</a>
+        </div>
+    </section>
+    <div class="container-product">
+        <div class="row">
+            <h4 class="heading-4">Quản Lý <span> Mặt Hàng</span></h4>
+            <button class="btn btn-add" onclick="openModel()">
+                <i class="fa-solid fa-plus"></i>
+                Thêm Sản Phẩm
+            </button>
+        </div>
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox">
+                        </th>
+                        <th>Tên Sản Phẩm</th>
+                        <th>Ảnh Sản Phẩm</th>
+                        <th>Giá Tiền</th>
+                        <th>Thông Số Kỹ Thuật</th>
+                        <th>Sửa & Xóa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--  -->
+
+                    <!--  -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="model-container">
+        <div class="model">
+            <div class="model-header">
+                <div class="model-title">Thêm Sản Phẩm Mới</div>
+                <div class="close-model" onclick="closeModel()">&times;</div>
+            </div>
+            <div class="model-body">
+                <div class="create-product">
+                    <div class="product-info">
+                        <div class="form-group">
+                            <label for="name">Tên Sản Phẩm</label>
+                            <input type="text" class="form-control" id="name">
+                            <input type="hidden" value="0" id="addId">
+                        </div>
+                        <div class="form-group">
+                            <label for="avatar">Ảnh Sản Phẩm</label>
+                            <input type="url" class="form-control" id="avatar" onchange="changeAvatar()">
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Giá Tiền</label>
+                            <input type="text" class="form-control" id="price">
+                        </div>
+                        <div class="form-group">
+                            <label for="info">Thông Số Kỹ Thuật</label>
+                            <input type="text" class="form-control" id="info">
+                        </div>
+                        <div class="form-group">
+                            <label for="email"></label>
+                            <button id="btnAdd" class="btn btn-warning mr" onclick="addProduct()">Tạo</button>
+                            <button id="btnUpdate" class="btn btn-primary mr d-none"
+                                onclick="updateProduct()">Lưu</button>
+                            <button class="btn btn-danger" onclick="closeModel()">Hủy</button>
+                        </div>
+                    </div>
+                    <div class="preview-avatar">
+                        <img class="avatar-lg"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9AxdZZFXa2k6R9ygsvSTIonXmKFFZB0iPIQ&usqp=CAU"
+                            alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="footer-container container">
+            <div class="footer-box">
+                <a href="#" class="logo">Porsche<span>NTN</span></a>
+                <div class="social">
+                    <a href="https://www.facebook.com/Official.Porsche.Importer.Vietnam" target="_blank"><i
+                            class='bx bxl-facebook'></i></a>
+                    <a href="https://www.youtube.com/channel/UCvGGsFINhxTQXiwb3pBTomw" target="_blank"><i
+                            class='bx bxl-youtube'></i></a>
+                    <a href="https://www.tiktok.com/@porsche" target="_blank"><i class='bx bxl-tiktok'></i></a>
+                    <a href="https://www.instagram.com/porsche_vietnam/" target="_blank"><i
+                            class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h3>Các Trung Tâm Porsche</h3>
+                <a href="https://porsche-vietnam.vn/dai-ly/trung-tam-porsche-sai-gon/" target="_blank">Trung Tâm Porsche
+                    Sài Gòn</a>
+                <a href="https://porsche-vietnam.vn/dai-ly/trung-tam-porsche-ha-noi/" target="_blank">Trung Tâm Porsche
+                    Hà Nội</a>
+                <a href="#">Trung Tâm Porsche Huế</a>
+            </div>
+            <div class="footer-box">
+                <h3>Porsche Việt Nam</h3>
+                <a href="#">Tin tức và Sự kiện</a>
+                <a href="#">Thông tin báo chí</a>
+                <a href="#">Cơ hội việc làm</a>
+            </div>
+            <div class="footer-box">
+                <h3>Thông tin liên lạc:</h3>
+                <p>Liên hệ chung: info@porsche-vietnam.com</p>
+                <p>Dịch vụ Khách hàng: crm@porsche-vietnam.com</p>
+            </div>
+        </div>
+    </section>
+    <script src="/dashboard.js"></script>
+    <script src="/main.js"></script>
+</body>
+
+</html>

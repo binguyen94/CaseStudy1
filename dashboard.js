@@ -152,10 +152,5 @@ function main() {
     init();
     renderAdd()
 }
-main()
+main();
 
-//link web tổng
-let icon = document.getElementById(".logo");
-icon.addEventListener("click", function () {
-        window.open("http://127.0.0.1:5500/index.html", "_blank");
-});

@@ -325,7 +325,7 @@ header.shadow #add-icon {
     background-color: #f6f6f6;
     margin-top: 150px;
     right: -100%;
-    transition: all 1s ease;
+    transition: all 0.7s ease;
     border-radius: 5%;
     border: 2px solid #fd052f;
     z-index: 1;

@@ -214,7 +214,7 @@ let icon = document.getElementById("add-icon");
 icon.addEventListener("click", function () {
     var result = confirm("Bạn có muốn sang trang quản lí mặt hàng sản phẩm?");
     if (result) {
-        window.open("http://127.0.0.1:5500/dashboard.html", "_blank");
+        window.open("./dashboard.html", "_blank");
     }
 });
 

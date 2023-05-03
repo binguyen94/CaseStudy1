@@ -181,7 +181,7 @@ var adds = []
 function init() {
     if (localStorage.getItem(add_key) == null) {
         adds = [
-            new Add(1, "718", `${avatar_url}`, '500000', 'kỹ thuật tốt'),
+            new Add(1, "718 Caymanxx", `${avatar_url}`, '3.850.000.000 VNĐ', 'Động cơ: Turbo tăng áp động cơ xăng Công suất cực đại: 370 mã lực tại 6.500 TVận tốc tối đa: 293 km/h Mô-men xoắn cực đại: 450 Nm tại 1.750 Trọng lượng: 1.425 - 1.485 kg'),
             new Add(2, "728", `${avatar_url}`, '500000', 'kỹ thuật vui'),
             new Add(3, "719", `${avatar_url}`, '500000', 'kỹ thuật lành'),
             new Add(4, "Caya", `${avatar_url}`, '500000', 'kỹ thuật an'),

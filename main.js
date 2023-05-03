@@ -212,7 +212,7 @@ function filterList() {
 //web add
 let icon = document.getElementById("add-icon");
 icon.addEventListener("click", function () {
-    var result = confirm("Bạn có muốn sang trang quản lí mặt hàng sản phẩm?");
+    var result = confirm("Bạn có muốn sang Trang Quản lí Sản Phẩm?");
     if (result) {
         window.open("./dashboard.html", "_blank");
     }

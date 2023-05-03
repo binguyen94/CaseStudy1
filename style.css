@@ -238,8 +238,8 @@ header.shadow #add-icon {
 }
 
 .cars-container .box img:hover {
-    transform: scale(1.5);
-    transform: 0.5s;
+    transform: scale(1.1);
+    transform: 3s;
 }
 
 .cars-container .box h2 {

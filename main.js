@@ -11,7 +11,7 @@ window.addEventListener('scroll', () => {
     header.classList.toggle('shadow', window.scrollY > 0);
 });
 
-//
+//thêm vào giỏ hàng
 let btn = document.querySelectorAll('.btn-buy')
 // console.log(btn)
 btn.forEach(function (button, index) {
@@ -32,7 +32,7 @@ function addCart(productPrice, productImg, productName) {
     for (let i = 0; i < cartItem.length; i++) {
         let productNew = document.querySelectorAll(".title")
         if (productNew[i].innerHTML == productName) {
-            return
+            return alert("Bạn đã thêm sản phẩm này vào giỏ hàng")
         }
     }
     let trcontent = '<tr><td class="product1"><img class="product1-img" src="' + productImg + '" alt=""><span class="title">' + productName + '</span></td><td><p><span class="price">' + productPrice + '</span><sup>VNĐ</sup></p></td><td><input class="input-product" type="number" value="1" min="1"></td><td class="btn-del">Xóa</td></tr>'
@@ -44,6 +44,8 @@ function addCart(productPrice, productImg, productName) {
     carttotal()
     deleteCart()
 }
+
+//// 
 
 // Tính tổng giá
 function carttotal() {
@@ -67,6 +69,7 @@ function carttotal() {
     let cartPrice = document.querySelector(".cart-price")
     carTotalPrice.innerHTML = numberWithCommas(totalPrice)
     cartPrice.innerHTML = numberWithCommas(totalPrice)
+    cartPrice.style.color = "#fd052f";
     inputChange()
 }
 
@@ -114,7 +117,7 @@ cartBtn.addEventListener("click", function () {
 })
 
 
-//
+//xem chi tiết
 let detailBtn1 = document.querySelector(".details1 .bx")
 let detailShow1 = document.querySelector(".details-btn1")
 detailShow1.addEventListener("click", function () {

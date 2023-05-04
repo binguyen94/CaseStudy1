@@ -45,6 +45,8 @@
     background-color: #d90429;
     border: 1px solid #d90429;
     color: white;
+    height: 50px;
+    font-size: 16px;
 }
 
 .btn-add:hover {
